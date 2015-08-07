@@ -1,4 +1,4 @@
-package io.github.barbosa.messagesview;
+package io.github.barbosa.messagesview.library;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

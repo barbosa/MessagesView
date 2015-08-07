@@ -1,9 +1,11 @@
-package io.github.barbosa.messagesview;
+package io.github.barbosa.messagesview.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import io.github.barbosa.messagesview.R;
 
 public class MainActivity extends AppCompatActivity {
 
