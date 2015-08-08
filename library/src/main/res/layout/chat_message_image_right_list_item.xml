@@ -14,8 +14,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="-8dp"
-        android:background="@drawable/chat_avatar_background"
-        android:src="@drawable/current_location" />
+        android:background="@drawable/chat_avatar_background" />
 
     <LinearLayout
         android:id="@+id/chat_message_image_right_list_item_bubble"

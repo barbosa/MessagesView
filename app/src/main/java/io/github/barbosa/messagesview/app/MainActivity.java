@@ -1,18 +1,22 @@
 package io.github.barbosa.messagesview.app;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import io.github.barbosa.messagesview.R;
+import io.github.barbosa.messagesview.library.views.MessagesView;
 
 public class MainActivity extends AppCompatActivity {
+
+    MessagesView messagesView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        messagesView = (MessagesView) findViewById(R.id.messages_view);
     }
 
     @Override

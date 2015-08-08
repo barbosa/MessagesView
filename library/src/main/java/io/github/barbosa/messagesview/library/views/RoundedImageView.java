@@ -1,4 +1,4 @@
-package io.github.barbosa.messagesview.library;
+package io.github.barbosa.messagesview.library.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
