@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/chat_activity_messages_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chat_activity_controls"
+        android:paddingBottom="30dp"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:clipToPadding="false"/>
+
+    <RelativeLayout
+        android:id="@+id/chat_activity_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="#CCCCCC"/>
+
+        <ImageButton
+            android:id="@+id/chat_activity_new_message_pictures_button"
+            android:contentDescription="send image"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_camera"/>
+
+        <EditText
+            android:id="@+id/chat_activity_new_message_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/chat_activity_send_button"
+            android:layout_toStartOf="@+id/chat_activity_send_button"
+            android:layout_toRightOf="@+id/chat_activity_new_message_pictures_button"
+            android:layout_toEndOf="@+id/chat_activity_new_message_pictures_button"
+            android:layout_marginRight="5dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="4"
+            android:hint="Type message here" />
+
+        <Button
+            android:id="@+id/chat_activity_send_button"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@color/loadsmart_green_light"
+            android:textColor="@android:color/white"
+            android:text="send"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

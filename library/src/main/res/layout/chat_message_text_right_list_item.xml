@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_message_horizontal_padding"
+    android:paddingRight="@dimen/chat_message_horizontal_padding">
+
+    <com.loadsmart.common.views.AvatarView
+        android:id="@+id/chat_message_text_right_list_item_avatar"
+        android:layout_width="@dimen/chat_message_avatar_size"
+        android:layout_height="@dimen/chat_message_avatar_size"
+        android:layout_alignBottom="@+id/chat_message_text_right_list_item_message"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-8dp"
+        android:background="@drawable/chat_avatar_background"
+        android:src="@drawable/current_location" />
+
+    <TextView
+        android:id="@+id/chat_message_text_right_list_item_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_green_balloon"
+        android:layout_marginTop="@dimen/chat_message_bubble_margin_top"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="@dimen/chat_message_space_between_avatar_and_bubble"
+        android:layout_marginEnd="@dimen/chat_message_space_between_avatar_and_bubble"
+        android:paddingTop="@dimen/chat_message_bubble_vertical_padding"
+        android:paddingBottom="@dimen/chat_message_bubble_vertical_padding"
+        android:paddingRight="@dimen/chat_message_bubble_start_padding"
+        android:paddingLeft="@dimen/chat_message_bubble_end_padding"
+        android:layout_toLeftOf="@id/chat_message_text_right_list_item_avatar"
+        android:layout_toStartOf="@id/chat_message_text_right_list_item_avatar" />
+
+    <TextView
+        android:id="@+id/chat_message_text_right_list_item_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_message_text_right_list_item_message"
+        android:layout_alignRight="@id/chat_message_text_right_list_item_message"
+        android:layout_marginTop="-4dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:text="now"
+        android:textColor="#979797"
+        android:textSize="11sp" />
+
+</RelativeLayout>
