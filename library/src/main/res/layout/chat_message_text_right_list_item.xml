@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/chat_message_horizontal_padding"
@@ -27,8 +26,8 @@
         android:layout_marginEnd="@dimen/chat_message_space_between_avatar_and_bubble"
         android:paddingTop="@dimen/chat_message_bubble_vertical_padding"
         android:paddingBottom="@dimen/chat_message_bubble_vertical_padding"
-        android:paddingRight="@dimen/chat_message_bubble_start_padding"
         android:paddingLeft="@dimen/chat_message_bubble_end_padding"
+        android:paddingRight="@dimen/chat_message_bubble_start_padding"
         android:layout_toLeftOf="@id/chat_message_text_right_list_item_avatar"
         android:layout_toStartOf="@id/chat_message_text_right_list_item_avatar" />
 

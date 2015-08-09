@@ -5,6 +5,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import io.github.barbosa.messagesview.library.models.Message;
+import io.github.barbosa.messagesview.library.models.Sender;
 import io.github.barbosa.messagesview.library.utils.PrettyDate;
 
 public abstract class MessageListItem extends RelativeLayout {
@@ -20,24 +21,29 @@ public abstract class MessageListItem extends RelativeLayout {
     }
 
     public void setMessage(Message message) {
+        if (message == null)
+            return;
+
+        if (dateTextView != null) {
+            String prettyDate = PrettyDate.with(getContext()).prettify(message.getCreatedAt());
+            dateTextView.setText(prettyDate);
+        }
+
+        Sender sender = message.getSender();
+        if (sender == null)
+            return;
+
         if (avatarView != null) {
-//            if (sender != null) {
-//                avatarView.setName(sender.getFirstName(), sender.getLastName());
+            avatarView.setName(sender.getFirstName(), sender.getLastName());
 //                if (sender.getAvatarURL() != null) {
 //                    Picasso.with(getContext())
 //                            .load(sender.getAvatarURL())
 //                            .into(avatarView.getImageView());
 //                }
-//            }
         }
 
-        if (senderNameTextView != null && message.getSender() != null) {
+        if (senderNameTextView != null) {
             senderNameTextView.setText(message.getSender().getFirstAndLastName());
-        }
-
-        if (dateTextView != null) {
-            String prettyDate = PrettyDate.with(getContext()).prettify(message.getCreatedAt());
-            dateTextView.setText(prettyDate);
         }
     }
 
