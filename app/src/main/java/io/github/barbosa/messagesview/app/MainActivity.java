@@ -2,9 +2,13 @@ package io.github.barbosa.messagesview.app;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import io.github.barbosa.messagesview.library.adapters.MessagesAdapter;
+import io.github.barbosa.messagesview.library.models.Message;
+import io.github.barbosa.messagesview.library.models.Sender;
 import io.github.barbosa.messagesview.library.views.MessagesView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,27 +21,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         messagesView = (MessagesView) findViewById(R.id.messages_view);
+
+        MessagesAdapter adapter = new MessagesAdapter(this, getMessages());
+        messagesView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private List<Message> getMessages() {
+        List<Message> messages = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Message message = new Message();
+            message.setSender(new Sender("Gustavo", "Barbosa", null));
+            message.setText("Hello " + (i+1));
+            messages.add(message);
         }
 
-        return super.onOptionsItemSelected(item);
+        return messages;
     }
 }

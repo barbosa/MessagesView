@@ -17,7 +17,7 @@
         android:textColor="#979797"
         android:textSize="11sp" />
 
-    <com.loadsmart.common.views.AvatarView
+    <io.github.barbosa.messagesview.library.views.AvatarView
         android:id="@+id/chat_message_image_left_list_item_avatar"
         android:layout_width="@dimen/chat_message_avatar_size"
         android:layout_height="@dimen/chat_message_avatar_size"

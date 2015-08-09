@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MessagesView</string>
+
+    <string name="chat_time_now">now</string>
+    <string name="chat_time_x_minutes_ago">%dmin ago</string>
+    <string name="chat_time_x_hours_ago">%dh ago</string>
+    <string name="chat_time_yesterday">yesterday</string>
 </resources>
