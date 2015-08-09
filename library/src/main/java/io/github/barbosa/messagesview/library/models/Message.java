@@ -9,6 +9,10 @@ public class Message {
     private Date createdAt = new Date();
     private String fileType;
 
+    public Message(Sender sender) {
+        this.sender = sender;
+    }
+
     public Sender getSender() {
         return sender;
     }

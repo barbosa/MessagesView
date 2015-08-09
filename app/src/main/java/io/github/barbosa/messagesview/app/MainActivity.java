@@ -31,9 +31,10 @@ public class MainActivity extends AppCompatActivity {
     private List<Message> getMessages() {
         List<Message> messages = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Message message = new Message();
-            message.setSender(new Sender("Gustavo", "Barbosa", null));
-            message.setText("Hello " + (i+1));
+            Sender sender = new Sender("Gustavo", "Barbosa", null, i % 2 == 0);
+            Message message = new Message(sender);
+            message.setText("Hello " + (i + 1));
+
             messages.add(message);
         }
 

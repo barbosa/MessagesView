@@ -42,10 +42,8 @@ public class MessagesAdapter extends ArrayAdapter<Message> {
 //        if (message.getFileUrl() != null) {
 //            return message.isMine() ? VIEW_TYPE_IMAGE_ME : VIEW_TYPE_IMAGE_OTHERS;
 //        }
-//
-//        return message.isMine() ? VIEW_TYPE_TEXT_ME : VIEW_TYPE_TEXT_OTHERS;
 
-        return VIEW_TYPE_TEXT_ME;
+        return message.getSender().isMe() ? VIEW_TYPE_TEXT_ME : VIEW_TYPE_TEXT_OTHERS;
     }
 
     @Override
