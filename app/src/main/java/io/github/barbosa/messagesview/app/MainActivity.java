@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Message> getMessages() {
         List<Message> messages = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Sender sender = new Sender("Gustavo", "Barbosa", null, i % 2 == 0);
+            Sender sender = new Sender("Gustavo", "Barbosa", "http://pickaface.net/includes/themes/clean/img/slide2.png", i % 2 == 0);
             Message message = new Message(sender);
             message.setText("Hello " + (i + 1));
 

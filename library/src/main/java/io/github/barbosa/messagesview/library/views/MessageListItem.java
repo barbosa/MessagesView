@@ -4,6 +4,8 @@ import android.content.Context;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import io.github.barbosa.messagesview.library.models.Message;
 import io.github.barbosa.messagesview.library.models.Sender;
 import io.github.barbosa.messagesview.library.utils.PrettyDate;
@@ -35,11 +37,13 @@ public abstract class MessageListItem extends RelativeLayout {
 
         if (avatarView != null) {
             avatarView.setName(sender.getFirstName(), sender.getLastName());
-//                if (sender.getAvatarURL() != null) {
-//                    Picasso.with(getContext())
-//                            .load(sender.getAvatarURL())
-//                            .into(avatarView.getImageView());
-//                }
+
+            if (sender.getImageURL() != null) {
+                Picasso.with(getContext())
+                        .load(sender.getImageURL())
+                        .resize(80, 80)
+                        .into(avatarView.getImageView());
+            }
         }
 
         if (senderNameTextView != null) {
