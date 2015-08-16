@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@drawable/chat_gray_balloon"
+        android:background="@drawable/messages_view_gray_bubble"
         android:layout_marginTop="@dimen/chat_message_bubble_margin_top"
         android:layout_marginLeft="@dimen/chat_message_space_between_avatar_and_bubble"
         android:layout_marginStart="@dimen/chat_message_space_between_avatar_and_bubble"

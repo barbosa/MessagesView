@@ -19,7 +19,7 @@
         android:id="@+id/chat_message_text_right_list_item_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/chat_green_balloon"
+        android:background="@drawable/messages_view_green_bubble"
         android:layout_marginTop="@dimen/chat_message_bubble_margin_top"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="@dimen/chat_message_space_between_avatar_and_bubble"
