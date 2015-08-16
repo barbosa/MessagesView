@@ -39,7 +39,8 @@
         android:paddingLeft="@dimen/chat_message_bubble_start_padding"
         android:paddingRight="@dimen/chat_message_bubble_end_padding"
         android:layout_toRightOf="@id/chat_message_text_left_list_item_avatar"
-        android:layout_toEndOf="@id/chat_message_text_left_list_item_avatar" />
+        android:layout_toEndOf="@id/chat_message_text_left_list_item_avatar"
+        android:textIsSelectable="true" />
 
     <TextView
         android:id="@+id/chat_message_text_left_list_item_date"
